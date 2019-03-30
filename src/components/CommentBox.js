@@ -1,7 +1,32 @@
 import React from "react";
 
-export default function() {
-  return (
-    <h3>Comment box </h3>
-  );
+class CommentBox extends React.Component {
+
+  state = {
+    comment: ""
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({ comment: "" });
+  };
+
+  handleChange = (e) => {
+    this.setState({ comment: e.target.value });
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <h4>Add a comment </h4>
+        <textarea value={this.state.comment} onChange={this.handleChange}/>
+        <div>
+          <button>Submit comment</button>
+        </div>
+      </form>
+    );
+  }
+
 }
+
+export default CommentBox;
