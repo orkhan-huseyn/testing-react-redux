@@ -1,6 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
+import Root from "Root";
 import CommentBox from "components/CommentBox";
 
 describe("<CommentBox />", function() {
@@ -8,7 +9,11 @@ describe("<CommentBox />", function() {
   let wrapper;
 
   beforeEach(function() {
-    wrapper = mount(<CommentBox />);
+    wrapper = mount(
+      <Root>
+        <CommentBox />
+      </Root>
+    );
   });
 
   afterEach(function() {
