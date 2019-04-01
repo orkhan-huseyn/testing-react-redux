@@ -10,4 +10,4 @@ export default function() {
       <CommentList />
     </React.Fragment>
   );
-};
+}

@@ -6,7 +6,6 @@ import CommentBox from "components/CommentBox";
 import CommentList from "components/CommentList";
 
 describe("<App />", function() {
-
   let wrapper;
 
   beforeEach(function() {
@@ -20,5 +19,4 @@ describe("<App />", function() {
   it("shows the comment list", function() {
     expect(wrapper.find(CommentList).length).toEqual(1);
   });
-
 });

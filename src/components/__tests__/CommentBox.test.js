@@ -5,7 +5,6 @@ import Root from "Root";
 import CommentBox from "components/CommentBox";
 
 describe("<CommentBox />", function() {
-
   let wrapper;
 
   beforeEach(function() {
@@ -26,7 +25,6 @@ describe("<CommentBox />", function() {
   });
 
   describe("<form>", function() {
-
     beforeEach(function() {
       wrapper.find("textarea").simulate("change", {
         target: { value: "new comment" }
@@ -43,7 +41,5 @@ describe("<CommentBox />", function() {
       wrapper.update();
       expect(wrapper.find("textarea").prop("value")).toEqual("");
     });
-
   });
-
 });

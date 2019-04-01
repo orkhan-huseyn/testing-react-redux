@@ -5,7 +5,6 @@ import Root from "Root";
 import CommentList from "components/CommentList";
 
 describe("<CommentList />", function() {
-
   let wrapper;
 
   beforeEach(function() {
@@ -23,5 +22,4 @@ describe("<CommentList />", function() {
   it("creates one <li> per comment", function() {
     expect(wrapper.find("li").length).toEqual(2);
   });
-
 });
