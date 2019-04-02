@@ -22,4 +22,9 @@ describe("<CommentList />", function() {
   it("creates one <li> per comment", function() {
     expect(wrapper.find("li").length).toEqual(2);
   });
+
+  it("shows the text for each comment", function() {
+    expect(wrapper.render().text()).toContain("Comment 1");
+    expect(wrapper.render().text()).toContain("Comment 2");
+  });
 });
