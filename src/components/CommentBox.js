@@ -24,7 +24,13 @@ class CommentBox extends React.Component {
         <textarea value={this.state.comment} onChange={this.handleChange} />
         <div>
           <button>Submit comment</button>
-          <button type="button" onClick={this.props.fetchComments}>
+        </div>
+        <div style={{ marginTop: "6px" }}>
+          <button
+            type="button"
+            className="btn-fetch-comments"
+            onClick={this.props.fetchComments}
+          >
             Fetch comments
           </button>
         </div>
